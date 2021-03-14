@@ -9,9 +9,18 @@ Hi!
     <title>Chris Waclawek</title>
   </head>
   <body>
-    <video autoplay loop id="myVideo">
+    <video playsinline autoplay loop poster="chris.jpg" id="bgvid">
       <source src="website.mov" type="video/mp4">
     </video>
+    life is surreal, elegant, playful
+
+<h1 style="font-size: 100px; font: Futura, sans-serif;"> &#128075 Our team is building </h1>
+
+
+<p style="font-size: 100px;">Line one</p>
+<p>Line 2</p>
+<p>Line 3</p>
+This is unformatted text in line 4
   </body>
 </html>
 
@@ -19,7 +28,7 @@ Hi!
   
 html
 {
-  background: url(chris.jpg) no-repeat center center fixed;
+  background: url(website.mov) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover
   -o-background-size: cover;
@@ -27,12 +36,13 @@ html
   color: #fff;
 }
 
-#myVideo {
-  position: fixed center;
-  right: 0;
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 div.card
