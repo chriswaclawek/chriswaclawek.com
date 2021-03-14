@@ -8,32 +8,66 @@ Hi!
   <head>
     <title>Chris Waclawek</title>
   </head>
-  <body>
-    <video playsinline autoplay loop id="bgvid">
+<body>
+  <div class="video-container">
+    <video autoplay loop>
       <source src="website.mov" type="video/mp4">
     </video>
-    life is surreal, elegant, playful
-
-<h1 style="font-size: 100px; font: Futura, sans-serif;"> &#128075 Our team is building </h1>
-
-
-<p style="font-size: 100px;">Line one</p>
-<p>Line 2</p>
-<p>Line 3</p>
-This is unformatted text in line 4
-  </body>
+    <div class="video-text">
+      <h1>Catchy title</h1>
+      <h2>Everyone loves catchy titles</h2>
+    </div>
+  </div>
+</body>
 </html>
 
 <style>
 
+* {
+  box-sizing: border-box;
+}
+body, html {
+  margin: 0;
+  height: 100%;
+  font-Family: Arial;
+}
 
-video {
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
+.video-container {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.video-container video {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left:50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.video-text {
+  z-index: 2; 
+  color: #fff;
+  text-align: center;
+}
+.video-container h1, .video-container h2  {
+  margin: 0;
+  font-size: 3rem;
+}
+.video-container h2  {
+  font-size: 1.4rem;
+  font-weight: normal;
+  opacity: 0.6;
+}
+
+.page-content {
+  line-height: 1.4rem;
+  padding: 2rem;
 }
 
 div.card
